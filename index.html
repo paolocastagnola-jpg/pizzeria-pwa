@@ -54,15 +54,17 @@
     </section>
   </main>
 
-  <aside id="cartPanel" class="hidden">
+  <aside id="cartPanel">
     <h2>Il tuo ordine</h2>
     <ul id="cartList"></ul>
     <div class="total">
       Totale: <span id="cartTotal">0€</span>
     </div>
-    <button class="checkout">Conferma Ordine</button>
+    <button id="checkoutBtn" class="checkout">Conferma Ordine</button>
   </aside>
 
+  <!-- MOLTO IMPORTANTE: script alla fine del body, percorso relativo -->
   <script src="app.js"></script>
 </body>
 </html>
+
