@@ -67,5 +67,27 @@
   <!-- MOLTO IMPORTANTE: script alla fine del body, percorso relativo -->
   <script src="app.js"></script>
 </body>
+<!-- Bottone fisso per aprire il carrello -->
+<button id="btn-apri-carrello">
+  🛒 Carrello (<span id="cart-count">0</span>)
+</button>
+
+<!-- Pannello carrello -->
+<div id="cart-panel">
+  <h2>Il tuo ordine</h2>
+
+  <div id="cart-items">
+    <!-- qui generi i prodotti con JS -->
+  </div>
+
+  <!-- bottone per confermare l'ordine -->
+  <button id="btn-conferma-ordine">Conferma ordine</button>
+
+  <!-- bottone per "far rientrare" il carrello -->
+  <button id="btn-chiudi-carrello">
+    ⬅ Continua ad ordinare
+  </button>
+</div>
+
 </html>
 

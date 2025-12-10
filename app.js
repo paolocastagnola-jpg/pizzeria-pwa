@@ -62,5 +62,24 @@ if (checkoutBtn) {
     window.open(waUrl, "_blank");
   };
 }
+document.addEventListener('DOMContentLoaded', () => {
+  const btnApri = document.getElementById('btn-apri-carrello');
+  const btnChiudi = document.getElementById('btn-chiudi-carrello');
+  const cartPanel = document.getElementById('cart-panel');
+
+  if (btnApri && cartPanel) {
+    btnApri.addEventListener('click', () => {
+      cartPanel.classList.add('aperto');
+    });
+  }
+
+  if (btnChiudi && cartPanel) {
+    btnChiudi.addEventListener('click', () => {
+      cartPanel.classList.remove('aperto');
+      // e torni a vedere il menu, perché il carrello rientra
+    });
+  }
+});
+
 
 
