@@ -1,0 +1,20 @@
+{
+  "name": "Moby Dick Pizzeria",
+  "short_name": "Moby Dick",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#d62828",
+  "icons": [
+    {
+      "src": "img/logo-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "img/logo-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

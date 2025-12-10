@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moby Dick Pizzeria</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#d62828">
+
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("sw.js");
+    }
+  </script>
+</head>
+
+<body>
+
+  <header>
+    <h1>🍕 Moby Dick Pizzeria</h1>
+    <button id="btnCart">🛒</button>
+  </header>
+
+  <main>
+    <section class="menu">
+      <h2>Il nostro menù</h2>
+
+      <div class="item">
+        <img src="img/placeholder.jpg" alt="Pizza Margherita">
+        <h3>Margherita</h3>
+        <p>Pomodoro, mozzarella, basilico.</p>
+        <strong>€ 6.00</strong>
+        <button onclick="addToCart('Margherita', 6)">Aggiungi</button>
+      </div>
+
+      <div class="item">
+        <img src="img/placeholder.jpg" alt="Pizza Diavola">
+        <h3>Diavola</h3>
+        <p>Pomodoro, mozzarella, salame piccante.</p>
+        <strong>€ 8.00</strong>
+        <button onclick="addToCart('Diavola', 8)">Aggiungi</button>
+      </div>
+
+      <div class="item">
+        <img src="img/placeholder.jpg" alt="Focaccia al formaggio">
+        <h3>Focaccia al formaggio</h3>
+        <p>Classica focaccia di Recco.</p>
+        <strong>€ 12.00</strong>
+        <button onclick="addToCart('Focaccia al formaggio', 12)">Aggiungi</button>
+      </div>
+
+    </section>
+  </main>
+
+  <aside id="cartPanel" class="hidden">
+    <h2>Il tuo ordine</h2>
+    <ul id="cartList"></ul>
+    <div class="total">
+      Totale: <span id="cartTotal">0€</span>
+    </div>
+    <button class="checkout">Conferma Ordine</button>
+  </aside>
+
+  <script src="app.js"></script>
+</body>
+</html>
