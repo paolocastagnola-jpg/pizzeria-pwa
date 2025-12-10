@@ -36,14 +36,17 @@ function updateCart() {
 
 // Invio ordine via WhatsApp
 if (checkoutBtn) {
-  checkoutBtn.onclick = () => {
+  checkoutBtn.onclick = (event) => {
+    // evita qualsiasi submit di form, anche se in futuro ci finisse dentro
+    event.preventDefault();
+
     if (cart.length === 0) {
       alert("Il carrello è vuoto!");
       return;
     }
 
     // >>> METTI QUI IL TUO NUMERO DI TELEFONO WHATSAPP <<<
-    const phoneNumber = "39XXXXXXXXXX"; // sostituisci con il tuo (es: 393471234567)
+    const phoneNumber = "393920283741"; // es: 393471234567
 
     let message = "Nuovo ordine da Moby Dick Pizzeria:%0A%0A";
 
@@ -59,4 +62,5 @@ if (checkoutBtn) {
     window.open(waUrl, "_blank");
   };
 }
+
 
